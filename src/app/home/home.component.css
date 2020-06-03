@@ -1,0 +1,22 @@
+.main_content{
+  width: 85%;
+  margin-left: 200px;
+  height: 90vh; 
+  position: fixed;
+  overflow-y: scroll;
+}
+  .centered {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 1000;
+  } 
+  .welcome{
+    font-weight:1000;
+font-family: 'Josefin Sans', sans-serif;
+text-transform:capitalize;
+text-align:center;
+color:#FFF;
+
+  }

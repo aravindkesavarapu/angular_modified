@@ -1,0 +1,22 @@
+<div class="main_content" *ngIf='isAdmin() || isUser()'>
+
+  <div class="card bg-dark text-center text-white">
+    <img src="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_library_bacteria.png"
+      class="card-img" alt="Responsive image" style="width:1345 px;height:580px;">
+    <div class="card-img-overlay">
+      <div class="centered">
+        <h2 class="text-center justify-content-center welcome">Welcome to Library Management System</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf='!(isAdmin() || isUser())'>
+  <div class="card bg-dark text-center text-white">
+    <img src="https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_library_bacteria.png"
+      class="card-img" alt="Responsive image" style="width:1345 px;height:580px;">
+    <div class="centered">
+      <h2 class="text-center justify-content-center welcome">Welcome to Library Management System</h2>
+    </div>
+  </div>
+</div>

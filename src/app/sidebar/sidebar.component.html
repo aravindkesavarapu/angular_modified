@@ -1,0 +1,36 @@
+<div class="wrapper" *ngIf='(isAdmin() || isUser())'>
+  <div class="sidebar">
+    <!-- <h2>user.firstName</h2> -->
+    <ul>
+      <!-- isAdmin -->
+
+      <li *ngIf='isAdmin()'><a routerLink="/home" class="active"><i class="fas fa-house-user"></i>Home</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/addBook"><i class="fas fa-book"></i> Add Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/showRequests"><i class="fas fa-book-reader"></i>Requested Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/showIssuedBooks"><i class="fas fa-address-card "></i>Issued Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/booksInfo"><i class="fas fa-search"></i>Search Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/showUsers"><i class="fas fa-users"></i>User Details</a></li>
+      <!-- isUsers -->
+
+      <li *ngIf='isUser()'><a routerLink="/requestBook"><i class="fas fa-search"></i>Search Books</a></li>
+      <li *ngIf='isUser()'><a routerLink="/returnBook"><i class="fas fa-map-pin"></i>Return Books</a></li>
+      <!-- common -->
+      <!-- <li ><a routerLink="/about"><i class="fas fa-map-pin"></i>About</a></li>
+      <li ><a routerLink="/contactUs"><i class="fas fa-map-pin"></i>Contact Us</a></li> -->
+
+    </ul>
+
+  </div>
+  <!-- <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ml-auto"> -->
+  <!-- <h1></h1> -->
+
+  <!-- <div class="main_content">
+      <div class="header">Welcome!! Have a nice day.</div>  
+      <div class="info">
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+    </div>
+  </div> -->
+  <!-- </nav> -->
+</div>
