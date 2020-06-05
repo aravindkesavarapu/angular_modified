@@ -24,7 +24,7 @@ export class AddBookComponent implements OnInit {
         this.message = 'Book added successfully';
       }
     }, error => {
-      console.log(error)
+      console.log(error);
     }
     );
   }

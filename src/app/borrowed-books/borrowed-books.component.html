@@ -1,25 +1,30 @@
 <div class="main_content">
-<div class="container mt-4">
-    <table class="table table-hover table-bordered">
-        <thead class="thead-dark">
-            <tr>
-                <th>ID</th>
-                <th>User Id</th>
-                <th>Book Id</th>
-                <th>Book Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor='let borrow of borrows'>
-                <td>{{borrow.id}}</td>
-                <td>{{borrow.uid}}</td>
-                <td>{{borrow.bookId}}</td>
-                <td>{{borrow.bookName}}</td>
-            </tr>
+<div id="content-wrapper" class="d-flex flex-column mt-5">
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Borrowed Books</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User Id</th>
+                                <th>Book Id</th>
+                                <th>Book Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let borrow of borrows'>
+                                <td>{{borrow.id}}</td>
+                                <td>{{borrow.uid}}</td>
+                                <td>{{borrow.bookId}}</td>
+                                <td>{{borrow.bookName}}</td>
+                            </tr>
 
-        </tbody>
-    </table>
-</div>
-</div>
-
-
+                        </tbody>
+                    </table>
+                </div>
+            </div>

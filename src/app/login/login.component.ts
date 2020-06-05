@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(form.value).subscribe(response => {
       console.log(response);
       if (response.error){
-        alert("Invalid Credentials,Please Login Again!!")
+        alert("Invalid Credentials,Please Login Again!!!")
         this.error = response.message;
         setTimeout(() => {
           this.error = null;
@@ -37,7 +37,4 @@ export class LoginComponent implements OnInit {
       }
     })
   }
-
-
-    
 }
