@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms'
+import {NgForm} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(form.value).subscribe(response => {
       console.log(response);
       if (response.error){
-        alert("Invalid Credentials,Please Login Again!!!")
+        alert(response.message);
         this.error = response.message;
         setTimeout(() => {
           this.error = null;
@@ -30,11 +30,13 @@ export class LoginComponent implements OnInit {
       } else{
         localStorage.setItem('user', JSON.stringify(response));
         if (response.user.role === 'admin'){
-        this.router.navigateByUrl('/');
+          alert('User Loggedin');
+          this.router.navigateByUrl('/');
         }else if (response.user.role === 'student'){
+          alert('User Loggedin');
           this.router.navigateByUrl('/');
         }
       }
-    })
+    });
   }
 }

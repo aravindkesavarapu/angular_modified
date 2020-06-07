@@ -54,7 +54,7 @@
         </li>
       </div>
         <li class="nav-item logout" *ngIf= 'isAdmin() || isUser()'>
-              <button class="nav-link btn btn-outline-secondary" routerLink="home" style="cursor: pointer; color: white;" (click)='logout()'>Logout</button>
+              <button class="nav-link btn btn-outline-secondary" name = 'logoutbutton' routerLink="home" style="cursor: pointer; color: white;" (click)='logout()'>Logout</button>
           </li>
       </ul>
     </div> 

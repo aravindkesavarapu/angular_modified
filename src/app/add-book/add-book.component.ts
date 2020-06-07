@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BookService } from '../book.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-book',
@@ -10,7 +11,10 @@ import { BookService } from '../book.service';
 export class AddBookComponent implements OnInit {
 
   message;
-  constructor( private bookService: BookService) { }
+  constructor( private bookService: BookService ,private titleService: Title) { 
+    this.titleService.setTitle('Add Books');
+
+  }
 
   ngOnInit(): void {
   }

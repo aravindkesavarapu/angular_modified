@@ -28,7 +28,7 @@
                     <p class="alert alert-danger" *ngIf="password.errors.required">Password is required</p>
                     <p class="alert alert-danger" *ngIf="password.errors.minlength">Accepts minimum 6 characters</p>
                   </div>
-                  <button type="submit" class="btn btn-primary btn-user btn-block logincolor"
+                  <button type="submit" class="btn btn-primary btn-user btn-block logincolor" name="loginbtn"
                     [disabled]='loginForm.invalid'>
                     Login
                   </button>

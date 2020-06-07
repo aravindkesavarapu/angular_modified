@@ -1,5 +1,5 @@
 <div class="main_content">
-  <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+  <div class="alert alert-success" *ngIf='message' id = "successmsg">{{message}}</div>
   <div class="container">
     <div class="col-xl-7 col-md-4 offset-md-2 mt-5">
       <div class="card o-hidden border-0 shadow-lg">
@@ -50,7 +50,7 @@
                   [(ngModel)]='bookToBeUpdated.publisherName' name="publisherName">
               </div>
             </div>
-            <button type="submit" class="btn btn-info btn-dark btn-block mb-3">Update Book</button>
+            <button type="submit" class="btn btn-info btn-dark btn-block mb-3" id = "updateBtn">Update Book</button>
           </form>
         </div>
       </div>

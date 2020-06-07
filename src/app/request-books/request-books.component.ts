@@ -15,7 +15,7 @@ export class RequestBooksComponent implements OnInit {
   error;
   search;
 
-  constructor(private bookService: BookService, private router: Router) { 
+  constructor(private bookService: BookService, private router: Router) {
       this.getBooks();
     }
 
@@ -33,26 +33,26 @@ export class RequestBooksComponent implements OnInit {
   }
 
   userRequest(bookId){
-    let userDetails = JSON.parse(localStorage.getItem('user'));
-    let userId = userDetails.user.id;
-    this.bookService.requestData({ id: userId, bookId : bookId}).subscribe(response =>{
+    const userDetails = JSON.parse(localStorage.getItem('user'));
+    const userId = userDetails.user.id;
+    this.bookService.requestData({ id: userId, bookId}).subscribe(response => {
       console.log(response);
       if (response.error){
         this.error = response.message;
-        alert("You have already requested the same book");
-        setTimeout(() =>{
+        alert('You have already requested the same book');
+        setTimeout(() => {
           this.error = null;
-        },5000);
+        }, 5000);
       }else {
-        alert("request placed successfully");
+        alert('Request placed successfully');
         this.message = 'Request Placed to admin';
-        setTimeout(() =>{
+        setTimeout(() => {
           this.message = null;
-        },5000);
+        }, 5000);
       }
 
     }
-      
-      )
+
+      );
   }
 }

@@ -45,12 +45,12 @@
                                         <td>{{books.publisherName}}</td>
                                         <td>{{books.copies}}</td>
                                         <td>
-                                            <button class="button btn--outline-primary" (click)='selectBook(books)'>
+                                            <button class="button btn--outline-primary" id ="updateBtn" (click)='selectBook(books)'>
                                                 Update
                                             </button>
                                         </td>
                                         <td>
-                                            <button class="button btn--outline-dark float-right"
+                                            <button class="button btn--outline-dark float-right" id="deleteBtn"
                                                 (click)='deleteBook(books.bookId)'>
                                                 Delete
                                             </button>

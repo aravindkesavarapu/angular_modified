@@ -4,17 +4,18 @@
     <ul>
 
       <!-- isAdmin -->
-      <li *ngIf='isAdmin()'><a routerLink="/home" class="active"><i class="fas fa-house-user"></i>Home</a></li>
-      <li *ngIf='isAdmin()'><a routerLink="/addBook"><i class="fas fa-book"></i> Add Books</a></li>
-      <li *ngIf='isAdmin()'><a routerLink="/showRequests"><i class="fas fa-book-reader"></i>Requested Books</a></li>
-      <li *ngIf='isAdmin()'><a routerLink="/showIssuedBooks"><i class="fas fa-address-card "></i>Issued Books</a></li>
-      <li *ngIf='isAdmin()'><a routerLink="/booksInfo"><i class="fas fa-search"></i>Search Books</a></li>
-      <li *ngIf='isAdmin()'><a routerLink="/showUsers"><i class="fas fa-users"></i>User Details</a></li>
+      <li *ngIf='(isAdmin() || isUser())' ><a routerLink="/home" class="active"><i class="fas fa-house-user"></i>Home</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/addBook"><i class="fas fa-book"></i>Add Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/requestBooksDetails"><i class="fas fa-book-reader"></i>Requested Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/issuedBookDetails"><i class="fas fa-address-card "></i>Issued Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/bookDetails"><i class="fas fa-search"></i>Search Books</a></li>
+      <li *ngIf='isAdmin()'><a routerLink="/userDetails"><i class="fas fa-users"></i>User Details</a></li>
       
       <!-- isUsers -->
-      <li *ngIf='isUser()'><a routerLink="/returnBook"><i class="fas fa-map-pin"></i>Return Books</a></li>
-      <li *ngIf='isUser()'><a routerLink="/returnBook"><i class="fas fa-map-pin"></i>Borrowed Books</a></li>
-      <li *ngIf='isUser()'><a routerLink="/requestBook"><i class="fas fa-search"></i>Search Books</a></li>
+      <!-- <li *ngIf='isUser()'><a routerLink="/returnBook"><i class="fas fa-map-pin"></i>Return Books</a></li> -->
+      <li *ngIf='isUser()'><a routerLink="/requestBook"><i class="fas fa-book"></i>Request A Book</a></li>
+      <li *ngIf='isUser()'><a routerLink="/returnBook"><i class="fas fa-book-reader"></i>Borrowed Books</a></li>
+      <li *ngIf='isUser()'><a routerLink="/allBookDetails"><i class="fas fa-search"></i>Search Books</a></li>
       
       <!-- common -->
       <!-- <li ><a routerLink="/about"><i class="fas fa-map-pin"></i>About</a></li>
