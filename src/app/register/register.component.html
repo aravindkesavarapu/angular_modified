@@ -60,7 +60,7 @@
 
               <div class="form-group">
                 <input type="password" class="form-control mt-3" id="password" name="password" #password='ngModel'
-                  placeholder="Password" ngModel required minlength="6" placeholder="Password">
+                  placeholder="Password" ngModel required minlength="6" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,10}$">
               </div>
               <div *ngIf="password.touched && password.invalid">
                 <p class="alert alert-danger" *ngIf="password.errors.required">Password is required</p>
@@ -79,7 +79,7 @@
               <div *ngIf="role.touched && role.invalid">
                 <p class="alert alert-danger" *ngIf="role.errors.required">Role is required</p>
               </div>
-              <button type="submit" class="btn btn-primary btn-user btn-block registerAccount"
+              <button type="submit" id = "register" class="btn btn-primary btn-user btn-block registerAccount"
                 [disabled]='registerForm.invalid'>
                 Register Account
               </button>

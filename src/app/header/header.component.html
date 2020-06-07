@@ -40,7 +40,7 @@
       <ul class="navbar-nav ml-auto">
         <div>
         <li class="nav-item" *ngIf= '!(isAdmin() || isUser())'>
-          <button class="nav-link btn btn-outline-secondary custombutton" routerLink="/login" style="cursor: pointer; color: white;" >Login</button>
+          <button class="nav-link btn btn-outline-secondary custombutton" routerLink="/login" id = 'login' style="cursor: pointer; color: white;" >Login</button>
         
           <!-- <a routerLink="/login" class="nav-link">Login</a> -->
         </li>
@@ -50,7 +50,7 @@
         <!-- &nbsp -->
         <li class="nav-item" *ngIf= '!(isAdmin() || isUser())'>
           <!-- <a routerLink="/register" class="nav-link">Register</a> -->
-          <button class="nav-link btn btn-outline-secondary custombutton" routerLink="/register" style="cursor: pointer; color: white;" >Register</button>
+          <button class="nav-link btn btn-outline-secondary custombutton" routerLink="/register" name = 'register' style="cursor: pointer; color: white;" >Register</button>
         </li>
       </div>
         <li class="nav-item logout" *ngIf= 'isAdmin() || isUser()'>
